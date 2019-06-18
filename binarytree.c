@@ -73,6 +73,23 @@ void displayTreeOnEnter(NODE *curNode)
     }
 }
 
+void displayTreeOnDeparture(NODE *curNode)
+{
+    //4 7 6 5 9 8 13 18 20 17 15 10
+
+    if (curNode->low)
+    {
+        displayTreeOnEnter(curNode->low);
+    }
+
+    if (curNode->high)
+    {
+        displayTreeOnEnter(curNode->high);
+    }
+
+    printf("%i ", curNode->value);
+}
+
 int main(void)
 {
     printf("hello\n");
@@ -90,5 +107,8 @@ int main(void)
     addNode(7);
 
     displayTreeOnEnter(rootNode);
+    printf("\n");
+
+    displayTreeOnDeparture(rootNode);
     printf("\n");
 }
