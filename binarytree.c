@@ -124,6 +124,8 @@ void freeList(NODE *curNode)
         return;
     }
 
+    freeList(curNode->low);
+    printf("Deleting node: %d\n", curNode->value);
 
     free(curNode);
 }
@@ -163,6 +165,7 @@ int main(void)
     displayTreeOnDeparture(rootNode);
     printf("\n");
 
+    freeList(rootNode);
     doesContain(10);
 
     tests();
