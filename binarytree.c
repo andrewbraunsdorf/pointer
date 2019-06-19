@@ -119,6 +119,11 @@ int doesContain(int value)
 
 void freeList(NODE *curNode)
 {
+    if (curNode == NULL)
+    {
+        return;
+    }
+
 
     free(curNode);
 }
