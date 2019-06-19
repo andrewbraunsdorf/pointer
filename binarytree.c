@@ -117,6 +117,12 @@ int doesContain(int value)
     }
 }
 
+void freeList(NODE *curNode)
+{
+
+    free(curNode);
+}
+
 void tests()
 {
     assert(doesContain(10) && "tree does contain 10");
