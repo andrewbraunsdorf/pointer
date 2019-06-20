@@ -181,7 +181,7 @@ int main(void)
     displayTreeOnDeparture(rootNode);
     printf("\n");
 
-    freeNode(rootNode);
+    freeList(rootNode);
     // doesContain(10);
 
     // tests();
