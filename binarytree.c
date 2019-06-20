@@ -131,6 +131,21 @@ void freeList(NODE *curNode)
     free(curNode);
 }
 
+void freeNode(NODE *curNode)
+{
+    if (curNode->low)
+    {
+        freeNode(curNode->low);
+    }
+
+    if (curNode->high)
+    {
+        freeNode(curNode->high);
+    }
+
+    free(curNode);
+}
+
 void tests()
 {
     assert(doesContain(10) && "tree does contain 10");
@@ -166,8 +181,8 @@ int main(void)
     displayTreeOnDeparture(rootNode);
     printf("\n");
 
-    freeList(rootNode);
-    doesContain(10);
+    freeNode(rootNode);
+    // doesContain(10);
 
-    tests();
+    // tests();
 }
