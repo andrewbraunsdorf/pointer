@@ -18,14 +18,41 @@ typedef struct QNODE
 
 NODE *rootNode;
 
-NODE *headNode;
+QNODE *headNode;
 
-void addQueue(int value)
+void push(NODE *value)
 {
-    NODE *newNode = malloc(sizeof(NODE));
+    QNODE *newNode = malloc(sizeof(QNODE));
     newNode->value = value;
-    newNode->next = headNode;
+    newNode->next = NULL;
+    if (headNode == NULL)
+    {
+        headNode = newNode;
+        return;
+    }
+
+        // NODE *trav = homeNode;
+    QNODE *trav = headNode;
+    while (trav->next != NULL)
+    {
+        trav = trav-> next;
+    }
+
+    trav->next = newNode;
 }
+
+// void displayList()
+// {
+//     NODE *trav = headNode;
+//     // should display
+//     // 5, 10, 8, 17
+//      while(trav->next != NULL)
+//      {
+//          printf("%i, ", trav->value);
+//          trav = trav-> next;
+//      }
+//      printf("%i\n", trav->value);
+// }
 
 void addNode(int value)
 {
@@ -201,4 +228,5 @@ int main(void)
     // doesContain(10);
 
     // tests();
+    push(rootNode);
 }
