@@ -20,7 +20,12 @@ NODE *rootNode;
 
 NODE *headNode;
 
-
+void addQueue(int value)
+{
+    NODE *newNode = malloc(sizeof(NODE));
+    newNode->value = value;
+    newNode->next = headNode;
+}
 
 void addNode(int value)
 {
