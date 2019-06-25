@@ -10,7 +10,17 @@ typedef struct NODE
     struct NODE *high;
 } NODE;
 
+typedef struct QNODE
+{
+    NODE *value;
+    struct QNODE *next;
+} QNODE;
+
 NODE *rootNode;
+
+NODE *headNode;
+
+
 
 void addNode(int value)
 {
@@ -173,6 +183,7 @@ int main(void)
     addNode(9);
     addNode(4);
     addNode(13);
+    addNode(14);
     addNode(7);
 
     displayTreeOnEnter(rootNode);
