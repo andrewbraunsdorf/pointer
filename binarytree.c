@@ -31,7 +31,7 @@ void push(NODE *value)
         return;
     }
 
-        // NODE *trav = homeNode;
+    // NODE *trav = homeNode;
     QNODE *trav = headNode;
     while (trav->next != NULL)
     {
@@ -43,7 +43,7 @@ void push(NODE *value)
 
 // void displayList()
 // {
-//     NODE *trav = headNode;
+//     QNODE *trav = headNode;
 //     // should display
 //     // 5, 10, 8, 17
 //      while(trav->next != NULL)
@@ -64,6 +64,7 @@ void addNode(int value)
     if (rootNode == NULL)
     {
         rootNode = newNode;
+        push(rootNode);
         return;
     }
 
@@ -79,6 +80,7 @@ void addNode(int value)
             {
                 // printf("found empty spot\n");
                 trav->low = newNode;
+                push(trav->low);
                 return;
             }
             // printf("found a low node valued: %i moving to it\n", trav->low->value);
@@ -91,6 +93,7 @@ void addNode(int value)
             {
                 // printf("found empty spot\n");
                 trav->high = newNode;
+                push(trav->high);
                 return;
             }
             // printf("found a high node valued: %i moving to it\n", trav->high->value);
@@ -228,5 +231,5 @@ int main(void)
     // doesContain(10);
 
     // tests();
-    push(rootNode);
+    // push(rootNode);
 }
