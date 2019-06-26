@@ -1,0 +1,39 @@
+Learning c to learn the base functioning
+Math conditionals loop structures and flow
+
+Over break cs50
+Hacker rank 30 days of code
+Free code camp
+
+Recursion in javascript
+
+Two weeks working on dev connector
+Reinforcing the knowledge base symbol
+No primal data types in c# they do not exist in
+Object oriented programming outside of code
+
+
+Storing the memory address to the pointer
+Queue lines things up for a certain purpose
+
+We need a linked list in our binary tree
+We need a new node
+Curnode
+
+Remove node is void
+Pop returns address to a node
+Push want it to add a node
+
+How do you know it works
+For queues self confidence, test in valgrind that the nodes are reachable
+Peek will show the item at the end of the queue without removing it
+.length for the queues to return how many items are in the line
+Get the address in the tree
+
+6.25
+
+Object oriented programming
+Abstraction
+Encapsulation
+Inheritance
+Polymorphism

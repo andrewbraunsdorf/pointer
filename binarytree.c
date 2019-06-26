@@ -289,3 +289,11 @@ NODE* pop()
     return temp;
 
 }
+
+// display level
+// 10-8-15-5-9-13
+// add children to queue //push
+// display
+// get next item in queue //pop
+// mvp one line in correct order
+// how do we know when we go down a new level
