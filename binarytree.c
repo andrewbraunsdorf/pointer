@@ -238,7 +238,7 @@ int main(void)
     // push(rootNode);
 }
 
-void push(NODE* address)
+void pushed(NODE* address)
 {
     QNODE *newQNode = malloc(sizeof(QNODE));
     newQNode->node = address;
