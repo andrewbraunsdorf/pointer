@@ -19,6 +19,10 @@ typedef struct QNODE
 NODE *rootNode;
 
 QNODE *headNode;
+// function declarations
+NODE* pop();
+void push(NODE*);
+
 
 void push(NODE *value)
 {
@@ -232,4 +236,28 @@ int main(void)
 
     // tests();
     // push(rootNode);
+}
+
+void push(NODE* address)
+{
+    QNODE *newQNode = malloc(sizeof(QNODE));
+    newQNode->node = address;
+    newQNode->next = NULL;
+    if (headNode == NULL)
+    {
+        headNode = newQNode;
+        return;
+    }
+    QNODE *trav = headNode;
+        while (trav->next != NULL)
+    {
+        trav = trav-> next;
+    }
+
+    trav->next = newQNode;
+}
+
+NODE* pop()
+{
+    return 0;
 }
