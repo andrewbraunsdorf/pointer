@@ -10,9 +10,14 @@ typedef struct NODE
     struct NODE *high;
 } NODE;
 
+// typedef struct QNODE
+// {
+//     NODE *value;
+//     struct QNODE *next;
+// } QNODE;
 typedef struct QNODE
 {
-    NODE *value;
+    NODE *node;
     struct QNODE *next;
 } QNODE;
 
@@ -21,29 +26,29 @@ NODE *rootNode;
 QNODE *headNode;
 // function declarations
 NODE* pop();
-void push(NODE*);
+void pushed(NODE*);
 
 
-void push(NODE *value)
-{
-    QNODE *newNode = malloc(sizeof(QNODE));
-    newNode->value = value;
-    newNode->next = NULL;
-    if (headNode == NULL)
-    {
-        headNode = newNode;
-        return;
-    }
+// void push(NODE *value)
+// {
+//     QNODE *newNode = malloc(sizeof(QNODE));
+//     newNode->value = value;
+//     newNode->next = NULL;
+//     if (headNode == NULL)
+//     {
+//         headNode = newNode;
+//         return;
+//     }
 
-    // NODE *trav = homeNode;
-    QNODE *trav = headNode;
-    while (trav->next != NULL)
-    {
-        trav = trav-> next;
-    }
+//     // NODE *trav = homeNode;
+//     QNODE *trav = headNode;
+//     while (trav->next != NULL)
+//     {
+//         trav = trav-> next;
+//     }
 
-    trav->next = newNode;
-}
+//     trav->next = newNode;
+// }
 
 // void displayList()
 // {
@@ -68,7 +73,7 @@ void addNode(int value)
     if (rootNode == NULL)
     {
         rootNode = newNode;
-        push(rootNode);
+        // push(rootNode);
         return;
     }
 
@@ -84,7 +89,7 @@ void addNode(int value)
             {
                 // printf("found empty spot\n");
                 trav->low = newNode;
-                push(trav->low);
+                // push(trav->low);
                 return;
             }
             // printf("found a low node valued: %i moving to it\n", trav->low->value);
@@ -97,7 +102,7 @@ void addNode(int value)
             {
                 // printf("found empty spot\n");
                 trav->high = newNode;
-                push(trav->high);
+                // push(trav->high);
                 return;
             }
             // printf("found a high node valued: %i moving to it\n", trav->high->value);
@@ -225,6 +230,9 @@ int main(void)
     addNode(14);
     addNode(7);
 
+    pushed(rootNode);
+    pushed(rootNode->low);
+    pushed(rootNode->high);
     displayTreeOnEnter(rootNode);
     printf("\n");
 
@@ -233,7 +241,8 @@ int main(void)
 
     freeList(rootNode);
     // doesContain(10);
-
+    printf("%i\n", pop()->value);
+    printf("%i\n", pop()->value);
     // tests();
     // push(rootNode);
 }
@@ -259,5 +268,24 @@ void pushed(NODE* address)
 
 NODE* pop()
 {
-    return 0;
+    // create temp store the headNode
+    // reassign the headNode
+    // return the address of a binarytree node
+
+
+    ////this also works
+    // NODE *temp = headNode;
+    // //both the same thing
+    // headNode = headNode->next;
+    // // headNode = headNode->next;
+    // return temp;
+
+    NODE *temp = headNode->node;
+    QNODE *qTemp = headNode;
+    //both the same thing
+    headNode = qTemp->next;
+    free(qTemp);
+    // headNode = headNode->next;
+    return temp;
+
 }
