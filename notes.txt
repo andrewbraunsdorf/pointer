@@ -37,3 +37,22 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism
+
+Clean code smells code
+non -good it does not smell good
+
+
+No clear way of creating the code
+We want to create a new struct with QNODE
+Node and NODE are different
+Ideas doesn’t mean it is the best
+
+Want push and pop functions
+We aren’t declaring any of our functions
+
+Nodes have to be declared before the function declarations
+That is why they have to be added after the typedef system
+
+Valgrind makes distinction between definitely lost and indirectly lost
+This is to allow the programmer to identify the error
+

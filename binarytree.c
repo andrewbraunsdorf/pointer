@@ -200,6 +200,11 @@ void freeNode(NODE *curNode)
     free(curNode);
 }
 
+//start at rootNode
+//mvp if there is at least a root node
+
+
+
 void tests()
 {
     assert(doesContain(10) && "tree does contain 10");
@@ -289,9 +294,27 @@ NODE* pop()
     return temp;
 
 }
+//add push twice, for each child element
+then pop with a temp via a NODE
+then get 8s children to queue via the temp variable
+now we print 8, pop next node
+
+
+create temp variable before
+
+create temp in the for loop to create a new variable
+
+
+void displayTree()
+{
+
+}
+
+
 
 // display level
 // 10-8-15-5-9-13
+// start at root node
 // add children to queue //push
 // display
 // get next item in queue //pop
