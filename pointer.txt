@@ -1,0 +1,13 @@
+Add address of each node
+Add 1st level, check level to see if it is the line we are modifying
+To see if they are level two nodes
+Need to add increment to counter,
+Adding level as new part of the struct
+Push function would require a level
+Modify struct, push, and pop...not pop full node but the q*
+
+QNODE Struct have node, level, next
+Push you are going to send it a level, node * int level
+Pop needs to return the whole QNODE * instead of the NODE
+Pop needs whole QNODE, which means you cannot send it via pop alone
+Need a copy and send it back
