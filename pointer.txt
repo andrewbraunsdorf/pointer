@@ -11,3 +11,16 @@ Push you are going to send it a level, node * int level
 Pop needs to return the whole QNODE * instead of the NODE
 Pop needs whole QNODE, which means you cannot send it via pop alone
 Need a copy and send it back
+
+Start at 10
+Int level to 1, start on level 0 but need to go and look to level 1
+Variable what we are adding to the node
+Add children but need address and level,
+Adds address of child level
+
+Print function
+
+Then we pop, we can check are we are on a new level
+If popped level == level then we are on a new level,
+Increment ++;
+Then print \n.  We can skip or
