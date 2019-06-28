@@ -307,27 +307,29 @@ NODE* pop()
 void displayTree()
 {
     NODE *trav = rootNode;
-    // while(rootNode != NULL)
-    while(trav != NULL)
+    while(rootNode != NULL)
+    // while(trav != NULL)
     {
         // pushed(trav->low);
         // pushed(trav->high);
-        if (trav->low != NULL)
+        if (rootNode->low != NULL)
         {
-            pushed(trav->low);
+            // pushed(trav->low);
+            pushed(rootNode->low);
         }
-        if (trav->high != NULL)
+        if (rootNode->high != NULL)
         {
-            pushed(trav->high);
+            // pushed(trav->high);
+            pushed(rootNode->high);
         }
-        printf("%i \n", trav->value);
+        printf("%i \n", rootNode->value);
 
         // printf("%i \n", rootNode->value);
-        NODE *temp = pop();
+        // NODE *temp = pop();
 
-        trav = temp;
+        // trav = temp;
 
-        // rootNode = pop();
+        rootNode = pop();
     }
 }
 
