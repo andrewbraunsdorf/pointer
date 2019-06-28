@@ -328,8 +328,14 @@ void displayTree()
         // NODE *temp = pop();
 
         // trav = temp;
-
-        rootNode = pop();
+        if (headNode == NULL)
+        {
+            return;
+        }
+        else
+        {
+            rootNode = pop();
+        }
     }
 }
 
