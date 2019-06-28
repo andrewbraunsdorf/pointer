@@ -27,7 +27,7 @@ QNODE *headNode;
 // function declarations
 NODE* pop();
 void pushed(NODE*);
-
+void displayTree(NODE*);
 
 // void push(NODE *value)
 // {
@@ -200,8 +200,7 @@ void freeNode(NODE *curNode)
     free(curNode);
 }
 
-//start at rootNode
-//mvp if there is at least a root node
+
 
 
 
@@ -235,19 +234,21 @@ int main(void)
     addNode(14);
     addNode(7);
 
-    pushed(rootNode);
-    pushed(rootNode->low);
-    pushed(rootNode->high);
-    displayTreeOnEnter(rootNode);
-    printf("\n");
+    // pushed(rootNode);
+    // pushed(rootNode->low);
+    // pushed(rootNode->high);
+    // displayTreeOnEnter(rootNode);
+    // printf("\n");
 
-    displayTreeOnDeparture(rootNode);
-    printf("\n");
+    // displayTreeOnDeparture(rootNode);
+    // printf("\n");
 
-    freeList(rootNode);
+    // freeList(rootNode);
+
+    displayTree(rootNode);
     // doesContain(10);
-    printf("%i\n", pop()->value);
-    printf("%i\n", pop()->value);
+    // printf("%i\n", pop()->value);
+    // printf("%i\n", pop()->value);
     // tests();
     // push(rootNode);
 }
@@ -263,7 +264,7 @@ void pushed(NODE* address)
         return;
     }
     QNODE *trav = headNode;
-        while (trav->next != NULL)
+    while (trav->next != NULL)
     {
         trav = trav-> next;
     }
@@ -295,22 +296,45 @@ NODE* pop()
 
 }
 //add push twice, for each child element
-then pop with a temp via a NODE
-then get 8s children to queue via the temp variable
-now we print 8, pop next node
+// then pop with a temp via a NODE
+// then get 8s children to queue via the temp variable
+// now we print 8, pop next node
 
 
-create temp variable before
 
-create temp in the for loop to create a new variable
 
 
 void displayTree()
 {
+    NODE *trav = rootNode;
+    // while(rootNode != NULL)
+    while(trav != NULL)
+    {
+        // pushed(trav->low);
+        // pushed(trav->high);
+        if (trav->low != NULL)
+        {
+            pushed(trav->low);
+        }
+        if (trav->high != NULL)
+        {
+            pushed(trav->high);
+        }
+        printf("%i \n", trav->value);
 
+        // printf("%i \n", rootNode->value);
+        NODE *temp = pop();
+
+        trav = temp;
+
+        // rootNode = pop();
+    }
 }
 
-
+// start at rootNode
+// mvp if there is at least a root node
+// create temp variable before
+// create temp in the for loop to create a new variable
 
 // display level
 // 10-8-15-5-9-13
