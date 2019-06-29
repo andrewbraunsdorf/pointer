@@ -24,3 +24,22 @@ Then we pop, we can check are we are on a new level
 If popped level == level then we are on a new level,
 Increment ++;
 Then print \n.  We can skip or
+
+Learning c to learn the base functioning
+Math conditionals loop structures and flow
+
+Over break cs50
+Hacker rank 30 days of code
+Free code camp
+
+Recursion in javascript
+
+Two weeks working on dev connector
+Reinforcing the knowledge base symbol
+No primal data types in c# they do not exist in
+Object oriented programming outside of code
+
+
+Storing the memory address to the pointer
+Queue lines things up for a certain purpose
+
