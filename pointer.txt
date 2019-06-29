@@ -43,3 +43,16 @@ Object oriented programming outside of code
 Storing the memory address to the pointer
 Queue lines things up for a certain purpose
 
+We need a linked list in our binary tree
+We need a new node
+Curnode
+
+Remove node is void
+Pop returns address to a node
+Push want it to add a node
+
+How do you know it works
+For queues self confidence, test in valgrind that the nodes are reachable
+Peek will show the item at the end of the queue without removing it
+.length for the queues to return how many items are in the line
+Get the address in the tree
